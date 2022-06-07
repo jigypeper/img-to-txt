@@ -1,0 +1,31 @@
+-------
+instructions
+-------
+1. download python on your laptop, make sure to select 'add to path' when installing
+2. download and install VS Code for your surface laptop
+3. download and install "tesseract-ocr-w64-setup-v5.0.1.20220118.exe (64 bit) resp." from https://github.com/UB-Mannheim/tesseract/wiki
+4. install pytesseract with this line of code:
+
+    pip pytesseract
+
+5. on this line: of the code (the .py file): 
+   
+   pytesseract.pytesseract.tesseract_cmd = r'C:\Users\hagi-1\AppData\Local\Programs\Tesseract-OCR\tesseract' 
+   
+   change everything before \tesseract to where you installed it on your laptop (on line 6) and save the file.
+
+6. go to your command line by pressing the windows button and then typing 'cmd', press enter.
+7. install pyinstaller with the following command (you can copy and paste it and hit enter):
+
+   pip pyinstaller
+
+8. now make sure this file is saved in your home directory, on your command prompt window it'll show something like (the folder on the end is your home directory):
+
+    C:\Users\hagi-1>
+
+9. now run the following (on the command prompt) :
+
+    pyinstaller --onefile -w img-to-txt.py
+
+you should now have an exe file in your home directory, you can now use that program to get text from images, 
+put it on a flash drive and you can use it on your work laptop.
